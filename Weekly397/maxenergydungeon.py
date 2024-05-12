@@ -14,8 +14,12 @@ def maxenergy(energy, k):
     else:
         res = 0
         i = 0
-        while k <= len(energy):
+        while (energy[i] + energy[k]) in energy:
             newvalue = energy[i] + energy[i + k]
             res = max(res, newvalue)
             i += 1
     return res
+
+# my solution fails to work with the fact that i + k in energy means that 
+# in examples like [-2,-3,-1], k = 2, -2 + -1 actually is in energy;
+# magician with value -3 is literally in energy
