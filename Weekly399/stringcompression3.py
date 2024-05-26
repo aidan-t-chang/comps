@@ -7,3 +7,4 @@
 # Return the string comp.
 
 def compress(word):
+    print(word)
