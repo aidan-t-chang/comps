@@ -17,5 +17,8 @@ for i in range(t):
         power = math.floor(math.log(n, k)) # math.log(a, base)
         if k != 1:
             n -= k**power
+        else:
+            n -= 1
+            
         res += 1
     print(res)
